@@ -1,0 +1,47 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.7.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+allprojects {
+    group 'com.springboot.snippet'
+    version '0.0.1-SNAPSHOT'
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    ext {
+        guavaVersion = '21.0'
+        commonLang3Version = '3.5'
+        lombokVersion = '1.16.18'
+    }
+
+    dependencies {
+        compile("com.google.guava:guava:${guavaVersion}")
+        compile("org.apache.commons:commons-lang3:${commonLang3Version}")
+        compile("org.projectlombok:lombok:${lombokVersion}")
+
+        compile('org.springframework.boot:spring-boot-starter')
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+        runtime('org.springframework.boot:spring-boot-devtools')
+    }
+}

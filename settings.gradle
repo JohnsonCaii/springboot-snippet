@@ -1,0 +1,5 @@
+rootProject.name = 'springboot-snippet'
+
+include 'swagger'
+include 'schedule-task'
+include 'multiple-data-source-jpa'
