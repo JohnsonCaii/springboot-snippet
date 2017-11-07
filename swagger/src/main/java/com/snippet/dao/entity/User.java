@@ -1,4 +1,4 @@
-package com.snippet.multiple.datasource.repository.market.model;
+package com.snippet.dao.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,25 +8,25 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * Created by johnson on 5/3/17.
+ * Created by caie on 07/11/2017.
  */
-@Entity
-@Table(name = "market_info")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MarketInfo implements Serializable {
+@Entity
+public class User implements Serializable {
 
-    private static final long serialVersionUID = -354036988631610500L;
+    private static final long serialVersionUID = -1212941056792352928L;
 
     @Id
     @GeneratedValue
     private Integer id;
-    private String marketName;
-    private String marketAddress;
+    private String name;
+    private Integer age;
+    private String address;
+    private String password;
 }

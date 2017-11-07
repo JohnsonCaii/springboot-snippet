@@ -9,9 +9,9 @@ import java.util.Map;
 /**
  * Created by johnson on 4/20/17.
  */
-public class CommonDataSourceConfig {
+class CommonDataSourceConfig {
 
-    protected Map<String, Object> props = new ImmutableMap.Builder<String, Object>()
+    final Map<String, Object> props = new ImmutableMap.Builder<String, Object>()
             .put("hibernate.physical_naming_strategy", SpringPhysicalNamingStrategy.class.getName())
             .put("hibernate.implicit_naming_strategy", SpringImplicitNamingStrategy.class.getName())
             // .put("hibernate.dialect", MySQL5InnoDBDialect.class.getName())
