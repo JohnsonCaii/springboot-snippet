@@ -3,3 +3,17 @@ rootProject.name = 'springboot-snippet'
 include 'swagger'
 include 'schedule-task'
 include 'multiple-data-source-jpa'
+
+include 'rabbitmq-common'
+project(':rabbitmq-common').projectDir = file("rabbitmq/common")
+
+include 'rabbitmq-producer'
+project(':rabbitmq-producer').projectDir = file('rabbitmq/producer')
+
+include 'rabbitmq-consumer'
+project(':rabbitmq-consumer').projectDir = file('rabbitmq/consumer')
+/*include 'rabbitmq-producer'
+include 'rabbitmq-consumer'*/
+
+/*include 'rabbit-consumer'
+project(":rabbit").projectDir = file("compliance-dashboard/dashboard-service")*/

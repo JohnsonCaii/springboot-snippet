@@ -40,8 +40,6 @@ subprojects {
         compile("org.apache.commons:commons-lang3:${commonLang3Version}")
         compile("org.projectlombok:lombok:${lombokVersion}")
 
-        compile('org.springframework.boot:spring-boot-starter-data-jpa')
-        compile("mysql:mysql-connector-java")
         compile('org.springframework.boot:spring-boot-starter')
         testCompile('org.springframework.boot:spring-boot-starter-test')
         runtime('org.springframework.boot:spring-boot-devtools')
