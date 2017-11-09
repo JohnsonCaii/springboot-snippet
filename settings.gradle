@@ -12,8 +12,3 @@ project(':rabbitmq-producer').projectDir = file('rabbitmq/producer')
 
 include 'rabbitmq-consumer'
 project(':rabbitmq-consumer').projectDir = file('rabbitmq/consumer')
-/*include 'rabbitmq-producer'
-include 'rabbitmq-consumer'*/
-
-/*include 'rabbit-consumer'
-project(":rabbit").projectDir = file("compliance-dashboard/dashboard-service")*/
