@@ -1,0 +1,23 @@
+server:
+  port: 8004
+
+
+spring:
+  application:
+      name: swagger
+  datasource:
+    name: swagger
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/open_source?useSSL=false
+    username: root
+    password: root
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    validationQuery: SELECT 1
+  profiles:
+    active: dev
+  jpa:
+    properties:
+      hibernate:
+        type: trace
+        enable_lazy_load_no_trans: true

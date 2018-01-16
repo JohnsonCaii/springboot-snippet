@@ -1,0 +1,7 @@
+logging:
+  level:
+    org.springframework.amqp.rabbit.core: DEBUG
+spring:
+  output:
+    ansi:
+      enabled: always
